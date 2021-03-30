@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+
+
+/* New images */
+td.unopened {
+  background: url('img/unopened_new.png');
+  cursor: pointer;
+}
+td.opened {
+  background: url('img/opened_new.png');
+}
+td.flagged {
+  background: url('img/flag_new.png');
+}
+td.question {
+  background: url('img/question.svg');
+}
+td.mine {
+  background: url('img/mine_new.png');
+}
+td.mine-neighbour-1 {
+  background: url('img/1_new.png');
+}
+td.mine-neighbour-2 {
+  background: url('img/2_new.png');
+}
+td.mine-neighbour-3 {
+  background: url('img/3_new.png');
+}
+td.mine-neighbour-4 {
+  background: url('img/4_new.png');
+}
+td.mine-neighbour-5 {
+  background: url('img/5_new.png');
+}
+td.mine-neighbour-6 {
+  background: url('img/6_new.png');
+}
+td.mine-neighbour-7 {
+  background: url('img/7_new.png');
+}
+td.mine-neighbour-8 {
+  background: url('img/8_new.png');
+}
+
+
+
+/* Positioning the Minesweep table and make sure the cells are square */
+
+table {
+  border-spacing: 2px;
+  border-collapse: separate !important;
+}
+
+table #minesweeper td {
+  width: 24px;
+  height: 24px;
+  background-size: cover;
+}
+
+/* Styling   */
+
+body {
+  background-color: #fffaf6 !important;
+  background-position: center;
+  background-size: cover;
+}
+
+p {
+  margin: 0 !important;
+  padding: 20px;
+  font-weight: 700;
+}
+
+.outer-container {
+  width: 700px;
+  margin: 0 auto;
+}
+
+.main-container {
+  max-width: 600px;
+  margin: 20px auto;
+  font-family: 'Anonymous Pro', monospace;
+  text-align: center;
+  background-color: #d0e7ee;
+  border-radius: 30px;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.table-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#header {
+  font-weight: 600;
+  color: white;
+  font-size: 40px;
+  width: 400px;
+  margin:  0 auto;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+}
+
+#instructions {
+  background-color: #e5baba;
+  border-radius: 30px;
+  color: white;
+  padding: 20px 14px 0 14px;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+
+/* Speech bubble styling */
+
+.status {
+  background-image: url('img/bubble.png');
+  background-position: center;
+  background-size: cover;
+  width: 140px;
+  height: 60px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+/* Status bubble animation */
+
+@keyframes wobble-top {
+	16.65% {
+		transform: skew(-12deg);
+	}
+
+	33.3% {
+		transform: skew(10deg);
+	}
+
+	49.95% {
+		transform: skew(-6deg);
+	}
+
+	66.6% {
+		transform: skew(4deg);
+	}
+
+	83.25% {
+		transform: skew(-2deg);
+	}
+
+	100% {
+		transform: skew(0);
+	}
+}
+
+.status {
+	transform-origin: 0 100%;
+}
+
+.status:hover {
+  animation-name: wobble-top;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+}
+
+
+#message {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 14px;
+  position: absolute;
+  bottom: 6px;
+  text-align: center;
+}
+
+
+/* Timer and bombs left counter styling */
+
+#timer,  #bombs-left {
+  font-family: 'Anonymous Pro', monospace;
+  background-color: #90918e;
+  width: 80px;
+  height: 80px;
+  padding: 3px 8px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  position: absolute;
+}
+
+#timer {
+  right: -40px;
+}
+
+#bombs-left {
+  left: -40px;
+}
+
+.bg-blue {
+  background-color: #80a4ab !important;
+}
+
+.bg-red {
+  background-color: #bf8580 !important;
+}
+
+/* Bounce effect on timer */
+
+@keyframes bounce {
+	8.3% {
+		transform: translateY(8px);
+	}
+
+	16.65% {
+		transform: translateY(-6px);
+	}
+
+	25% {
+		transform: translateY(4px);
+	}
+
+	33.3% {
+		transform: translateY(-2px);
+	}
+
+	41.6% {
+		transform: translateY(1px);
+	}
+
+	50% {
+		transform: translateY(0);
+	}
+}
+
+.bounce-effect {
+  animation-name: bounce;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+
+/* Restart button styling  */
+
+.restart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e5baba;
+
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  margin: 20px auto 0 auto;
+  border-radius: 30px;
+  height: 50px;
+  width: 150px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  font-size: 22px;
+  color: white;
+}
+
+.restart:hover {
+  background-color: #90918e;
+  cursor: pointer;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .outer-container {
+    width: 500px;
+  }
+  .main-container {
+    max-width: 400px;
+  }
+}
+
