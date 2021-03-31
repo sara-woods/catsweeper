@@ -3,58 +3,54 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
 
 
-/* New images */
+/* Images */
 td.unopened {
-  background: url('img/unopened_new.png');
+  background: url('img/unopened.png');
   cursor: pointer;
 }
 td.opened {
-  background: url('img/opened_new.png');
+  background: url('img/opened.png');
 }
 td.flagged {
-  background: url('img/flag_new.png');
+  background: url('img/toy.png');
 }
-td.question {
-  background: url('img/question.svg');
+td.cat {
+  background: url('img/cat.png');
 }
-td.mine {
-  background: url('img/mine_new.png');
+td.cat-neighbour-1 {
+  background: url('img/1.png');
 }
-td.mine-neighbour-1 {
-  background: url('img/1_new.png');
+td.cat-neighbour-2 {
+  background: url('img/2.png');
 }
-td.mine-neighbour-2 {
-  background: url('img/2_new.png');
+td.cat-neighbour-3 {
+  background: url('img/3.png');
 }
-td.mine-neighbour-3 {
-  background: url('img/3_new.png');
+td.cat-neighbour-4 {
+  background: url('img/4.png');
 }
-td.mine-neighbour-4 {
-  background: url('img/4_new.png');
+td.cat-neighbour-5 {
+  background: url('img/5.png');
 }
-td.mine-neighbour-5 {
-  background: url('img/5_new.png');
+td.cat-neighbour-6 {
+  background: url('img/6.png');
 }
-td.mine-neighbour-6 {
-  background: url('img/6_new.png');
+td.cat-neighbour-7 {
+  background: url('img/7.png');
 }
-td.mine-neighbour-7 {
-  background: url('img/7_new.png');
-}
-td.mine-neighbour-8 {
-  background: url('img/8_new.png');
+td.cat-neighbour-8 {
+  background: url('img/8.png');
 }
 
 
 
 /* Positioning the Minesweep table and make sure the cells are square */
-
 table {
   border-spacing: 2px;
   border-collapse: separate !important;
 }
 
-table #minesweeper td {
+table #catsweeper td {
   width: 24px;
   height: 24px;
   background-size: cover;
@@ -179,12 +175,12 @@ p {
   position: absolute;
   bottom: 6px;
   text-align: center;
+  width: 140px;
 }
 
 
-/* Timer and bombs left counter styling */
-
-#timer,  #bombs-left {
+/* Timer and cats left counter styling */
+#timer,  #flags-left {
   font-family: 'Anonymous Pro', monospace;
   background-color: #90918e;
   width: 80px;
@@ -202,7 +198,7 @@ p {
   right: -40px;
 }
 
-#bombs-left {
+#flags-left {
   left: -40px;
 }
 
@@ -276,7 +272,16 @@ p {
 }
 
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 770px) {
+  .outer-container {
+    width: 600px;
+  }
+  .main-container {
+    max-width: 500px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
   .outer-container {
     width: 500px;
   }
@@ -284,4 +289,5 @@ p {
     max-width: 400px;
   }
 }
+
 

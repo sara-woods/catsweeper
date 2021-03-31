@@ -12,6 +12,7 @@
     },
     "rules": {
         "comma-dangle": "off",
-        "quotes": "off"
+        "quotes": "off",
+        "no-multiple-empty-lines": [2, {"max": 2}]
     }
 }
