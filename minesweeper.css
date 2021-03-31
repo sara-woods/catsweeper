@@ -94,7 +94,6 @@ p {
 }
 
 #header {
-  font-weight: 600;
   color: white;
   font-size: 40px;
   width: 400px;
@@ -283,10 +282,17 @@ p {
 
 @media only screen and (max-width: 400px) {
   .outer-container {
-    width: 500px;
+    width: 375px;
   }
   .main-container {
-    max-width: 400px;
+    max-width: 280px;
+  }
+  #header {
+    font-size: 30px;
+    width: 200px;
+  }
+  #timer, #flags-left {
+    top: 427px;
   }
 }
 
